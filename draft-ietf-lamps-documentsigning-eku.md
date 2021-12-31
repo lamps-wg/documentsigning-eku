@@ -50,7 +50,7 @@ normative:
 {{!RFC5280}} specifies several extended key purpose identifiers for X.509 certificates. In addition,
 several extended key purpose identifiers were added{{!RFC7299}} as public OIDs under the IANA PKIX Extended key purpose identifiers arc.
 While usage of the any extended key usage value is bad practice for publicly trusted certificates,
-there is no public and general extended key purpose identifiers explicitly assigned for Document Signing certificates.
+there is no public and general extended key purpose identifier explicitly assigned for Document Signing certificates.
 The current practice is to use id-kp-emailProtection, id-kp-codeSigning or vendor defined Object IDs
 for general document signing purposes.
 
