@@ -62,7 +62,6 @@ decreased cryptographic agility on the document signing ecosystem and vice versa
 There is no issue if the vendor defined OIDs are used in a PKI (or a trust program) governed by the vendor.
 However, if the OID is used outside of the vendor governance, the usage can easily become out of control
 (e.g. - When the end user encounters vendor defined OIDs, they might want to ask that vendor about use of the certificate, however, the vendor may not know about the particular use. - If the issuance of the cert is not under the control of the OID owner, there is no way for the OID owner to know what the impact will be if any change is made to the OID in question, and it would restrict vendor's choice of OID management. etc.).
-<!--何が問題かを、上に書いた。-->
 
 Therefore, it is not favorable to use a vendor defined EKU for signing a document that is not governed by the vendor.
 
@@ -98,8 +97,6 @@ The EKU extension syntax is repeated here for convenience:
 ~~~
 
 This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of this KeyPurposeId in a certificate indicates that the use of any Subject names in the certificate is restricted to use by a document signing service or a software (along with any usages allowed by other EKU values).
-
-<!-- the use of any Subject names in the certificate is restricted to use by a document signing service or a software. >これはそのままでいいと思う？-->
 
 ~~~
     id-kp  OBJECT IDENTIFIER  ::=
