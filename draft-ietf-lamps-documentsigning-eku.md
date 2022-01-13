@@ -54,7 +54,7 @@ normative:
 # Introduction
 
 {{!RFC5280}} specifies several extended key usages for X.509 certificates. In addition,
-several extended key usage had been added{{!RFC7299}} as public OID under the IANA repository.
+several extended key usage had been added{{?RFC7299}} as public OID under the IANA repository.
 While usage of any extended key usage is bad practice for publicly trusted certificates,
 there are no public and general extended key usage explicitly assigned for Document Signing certificates.
 The current practice is to use id-kp-emailProtection, id-kp-codeSigning or vendor defined Object ID
@@ -110,7 +110,7 @@ This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of 
 
 # Using the Document Signing EKU in a Certificate
 
-{{!RFC8358}} specifies the conventions for digital signatures on Internet-Drafts. This is one of the intended use cases for the general document signing EKU described in this document. {{RFC8358}} uses CMS to digitally sign a wide array of files such as ASCII, PDF, EPUB, HTML etc. Currently, there are no specification regarding EKU for certificates signing those files except those which are defined by the software vendor.
+{{?RFC8358}} specifies the conventions for digital signatures on Internet-Drafts. This is one of the intended use cases for the general document signing EKU described in this document. {{RFC8358}} uses CMS to digitally sign a wide array of files such as ASCII, PDF, EPUB, HTML etc. Currently, there are no specification regarding EKU for certificates signing those files except those which are defined by the software vendor.
 
 The signed contents of Internet-Drafts are primarily intended to be consumed by human. To be more precise, contents are intended to be shown to human in a printable or displayable form by means of services or software, rather than processed by machines. To validate the digital signature which is signed to contents intended to be consumed by human, implementations MAY perform the steps below as a certificate validation:
 
