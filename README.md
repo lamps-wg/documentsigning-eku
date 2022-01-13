@@ -1,6 +1,6 @@
 # General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates
 
-This is the working area for the Internet-Draft, "General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates".
+This is the working area for the [IETF LAMPS Working Gorup](https://datatracker.ietf.org/wg/lamps/documents/) Internet-Draft, "General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates".
 
 * [Editor's Copy](https://lamps-wg.github.io/documentsigning-eku/draft-ietf-lamps-documentsigning-eku.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-documentsigning-eku/)
