@@ -47,7 +47,7 @@ normative:
 
 --- abstract
 
-{{!RFC5280}} specifies several extended key usages for X.509 certificates. This document defines a general purpose document signing extended key usage for X.509 public key certificates which restricts the usage of the certificates for document signing.
+{{!RFC5280}} specifies several extended key usages for X.509 certificates. This document defines a general purpose document signing extended key usage for X.509 public key certificates which specifies the usage of the certificates for document signing.
 
 --- middle
 
@@ -71,7 +71,7 @@ However, if the OID is used outside of the vendor governance, the usage can easi
 
 Therefore, it is not favorable to use a vendor defined EKU for signing a document that is not governed by the vendor.
 
-This document defines a general Document Signing extended key usage.
+This document defines a general Document Signing extended key purpose identifier.
 
 # Conventions and Definitions
 
@@ -81,9 +81,9 @@ This document defines a general Document Signing extended key usage.
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the
-use of any Subject names in the certificate is restricted to use by a document signing.
+use of the certified public key is allowed to be used for verifying the signature on a document.
 
-Term of "Document Sign" in this document is digitally sign contents that are consumed by humans.
+Term of "Document Sign" in this document is digitally signes contents that are consumed by humans.
 To be more precise,
 contents are intended to be shown to human with printable or displayable form by means of services or software,
 rather than processed by machines.
@@ -99,7 +99,7 @@ The EKU extension syntax is repeated here for convenience:
     KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
 
-This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of this KeyPurposeId in a certificate indicates that the use of any Subject names in the certificate is restricted to use by a document signing service or a software (along with any usages allowed by other EKU values).
+This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of this KeyPurposeId in a certificate indicates that the Subject named in the certificate signed the document content, and the associated keys can be used by a document signing service or a software for authentication, message integrity, and non-repudiation of origin (using digital signatures, along with any usages allowed by other EKU values).
 
 ~~~
     id-kp  OBJECT IDENTIFIER  ::=
@@ -112,7 +112,7 @@ This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of 
 
 {{?RFC8358}} specifies the conventions for digital signatures on Internet-Drafts. This is one of the intended use cases for the general document signing EKU described in this document. {{RFC8358}} uses CMS to digitally sign a wide array of files such as ASCII, PDF, EPUB, HTML etc. Currently, there are no specification regarding EKU for certificates signing those files except those which are defined by the software vendor.
 
-The signed contents of Internet-Drafts are primarily intended to be consumed by human. To be more precise, contents are intended to be shown to human in a printable or displayable form by means of services or software, rather than processed by machines. To validate the digital signature which is signed to contents intended to be consumed by human, implementations MAY perform the steps below as a certificate validation:
+The signed contents of Internet-Drafts are primarily intended to be consumed by human. To be more precise, contents are intended to be shown to human in a printable or displayable form by means of services or software, rather than processed by machines. The digital signature on the contents is to indicate to the recipient of the contents that the content has not changed since it was signed by the identity indicated as the subject of the certificate. To validate the digital signature which is signed on contents intended to be consumed by humans, implementations MAY perform the steps below during certificate validation:
 
 The implementation MAY examine the Extended Key Usage value(s):
 
@@ -122,7 +122,7 @@ The implementation MAY examine the Extended Key Usage value(s):
 
 Each Restriction on the EKUs can be “Excluded EKU” or “Permitted EKU” and handled.
 
-The procedure is intended to permit or prohibit presence of a certain EKU or complete absence of EKUs. It is outside the scope of this document, but the relying party can permit or prohibit conbinations of EKU. A consideration on prohibiting combination of EKUs is described in the security consideration section of this document.
+The procedure is intended to permit or prohibit presence of a certain EKU or complete absence of EKUs. It is outside the scope of this document, but the relying party can permit or prohibit combinations of EKU. A consideration on prohibiting combinations of EKUs is described in the security consideration section of this document.
 
 2.1. Excluded EKUs procedure
 “Excluded EKU” is an EKU which the relying party or the relying party software prohibits. Examples of "Excluded EKU" are, presence of anyEKU or complete absence of EKU extension on a certificate. If an EKU of the certificate meets the conditions set by the “Excluded EKU” restriction, the relying party or the relying party software rejects the certificate.
@@ -130,18 +130,18 @@ The procedure is intended to permit or prohibit presence of a certain EKU or com
 2.2. Permitted EKU procedure
 “Permitted EKU” is an EKU which the relying party or the relying party software accepts. Examples of “Permitted EKU” are, presence of this general document signing EKU and/or protocol specific document signing-type EKUs. If an EKU of the certificate meets the condition set by a “Permitted EKU” restriction, the certificate is acceptable. Otherwise, relying party or the relying party software rejects the certificate.
 
-When a single software has capability to process various data formats, the software may choose to make the excluded and permitted decisions separately in accordance with the format it is handling (e.g. text, pdf, etc).
+When a single software has the capability to process various data formats, the software may choose to make the excluded and permitted decisions separately in accordance with the format it is handling (e.g. text, pdf, etc).
 
 # Implications for a Certification Authority
 The procedures and practices employed by a certification authority MUST ensure that the correct values for the EKU extension are inserted in each certificate that is issued.
 Unless certificates are governed by a vendor specific PKI (or trust program), certificates that indicate usage for document signing MAY include the id-kp-documentSigning EKU extension. This does not encompass the mandatory usage of the id-kp-documentSigning EKU in conjunction with the vendor specific EKU. However, this does not restrict the CA from including multiple EKUs related to document signing.
 
 # Security Considerations
-The usage of id-kp-documentSigning EKU intends to prevent id-kp-emailProtection from being used for none-email purposes and id-kp-codeSigning used to sign objects other than binary codes. This EKU does not introduce new security risks but instead reduces existing security risks by providing means to separate other EKUs used for communication protocols namely, TLS or S/MIME etc. in order to minimize the risk of cross protocol attacks.
+The usage of id-kp-documentSigning EKU is to provide an alternative to id-kp-emailProtection being used for non-email purposes and id-kp-codeSigning being used to sign objects other than binary code. This EKU does not introduce new security risks but instead reduces existing security risks by providing means to separate other EKUs used for communication protocols namely, TLS or S/MIME etc. in order to minimize the risk of cross protocol attacks.
 
-To reduce the risk of specific cross protocol attacks, the relying party or relying party software may additionaly prohibit use of specific combination of EKUs.
+To reduce the risk of specific cross protocol attacks, the relying party or relying party software may additionally prohibit use of specific combination of EKUs.
 
-While a specific protocol or signing scheme may choose to come up with their own EKU, some may not have significant motive or resource to set up and manage thier own EKU. This general document signing EKU may be used as a stop gap for those that intend to set up their own EKU or those who do not intend to set up an EKU but still would like to distinguish from other usage.
+While a specific protocol or signing scheme may choose to come up with their own EKU, some may not have significant motive or resources to set up and manage their own EKU. This general document signing EKU may be used as a stop gap for those that intend to set up their own EKU or those who do not intend to set up an EKU but still would like to distinguish document signing from other usages.
 
 Introduction of this id-kp-documentSigning EKU value does not introduce any new security or privacy concerns.
 
