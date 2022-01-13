@@ -1,13 +1,19 @@
 ---
-title: "General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates"
-abbrev: "EKU for Document Signing"
+title: General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates
+abbrev: EKU for Document Signing
 category: std
 
 docname: draft-ietf-lamps-documentsigning-eku-latest
 ipr: trust200902
 keyword: Internet-Draft
-area: "Security"
-workgroup: "LAMPS"
+area: SEC
+workgroup: LAMPS Working Group
+venue:
+  group: "Limited Additional Mechanisms for PKIX and SMIME (LAMPS)"
+  type: "Working Group"
+  mail: "spasm@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/spasm/"
+  github: lamps-wg/documentsigning-eku
 
 stand_alone: yes
 smart_quotes: no
@@ -69,10 +75,7 @@ This document defines a general Document Signing extended key purpose identifier
 
 # Conventions and Definitions
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this
-document are to be interpreted as described in BCP 14 {{!RFC2119}} {{!RFC8174}}
-when, and only when, they appear in all capitals, as shown here.
+{::boilerplate bcp14}
 
 # Extended Key usage for DocumentSigning
 
@@ -97,7 +100,6 @@ The EKU extension syntax is repeated here for convenience:
 ~~~
 
 This specification defines the KeyPurposeId id-kp-documentSigning. Inclusion of this KeyPurposeId in a certificate indicates that the Subject named in the certificate signed the document content, and the associated keys can be used by a document signing service or a software for authentication, message integrity, and non-repudiation of origin (using digital signatures, along with any usages allowed by other EKU values).
-
 
 ~~~
     id-kp  OBJECT IDENTIFIER  ::=
@@ -149,11 +151,6 @@ This document requests that IANA make two assignments. One for the id-kp-documen
 
 --- back
 
-# Acknowledgments
-{:numbered="false"}
-
-We would like to thank Russ Housley for verifying the ASN.1 module.
-
 # Appendix A. ASN.1 Module
 {:numbered="false"}
 
@@ -161,7 +158,7 @@ The following ASN.1 module provides the complete definition of the
 Document Signing EKU.
 
 ~~~
-DocSignEKU { iso(1) identified-organization(3) dod(6) internet(1)
+   DocSignEKU { iso(1) identified-organization(3) dod(6) internet(1)
    security(5) mechanisms(5) pkix(7) id-mod(0) id-mod-docsign-eku(TBD1) }
 
    DEFINITIONS EXPLICIT TAGS ::=
@@ -184,3 +181,8 @@ DocSignEKU { iso(1) identified-organization(3) dod(6) internet(1)
 
    END
 ~~~
+
+# Acknowledgments
+{:numbered="false"}
+
+We would like to thank Russ Housley for verifying the ASN.1 module.
