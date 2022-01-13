@@ -1,6 +1,6 @@
-# Clarifications for Ed25519, Ed448, X25519, and X448 Algorithm Identifiers
+# General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates
 
-This is the working area for the Internet-Draft, "Clarifications for Ed25519, Ed448, X25519, and X448 Algorithm Identifiers".
+This is the working area for the Internet-Draft, "General Purpose Extended Key Usage (EKU) for Document Signing X.509 Certificates".
 
 * [Editor's Copy](https://lamps-wg.github.io/documentsigning-eku/draft-ietf-lamps-documentsigning-eku.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-documentsigning-eku/)
