@@ -47,6 +47,7 @@ normative:
 
 --- abstract
 
+
 RFC 5280 specifies several extended key usages for X.509 certificates.
 This document defines a general purpose document signing extended key
 usage for X.509 public key certificates which restricts the usage of
@@ -86,7 +87,7 @@ management. etc.).
 Therefore, it is not favorable to use a vendor defined EKU for signing a
 document that is not governed by the vendor.
 
-This document defines a general Document Signing extended key usage.
+This document defines a general Document Signing extended key purpose identifier.
 
 # Conventions and Definitions
 
@@ -120,6 +121,7 @@ The EKU extension syntax is repeated here for convenience:
   KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
 
+
 This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the use
 of any Subject names in the certificate is restricted to use by a
@@ -135,6 +137,7 @@ by other EKU values).
 ~~~
 
 # Using the Document Signing EKU in a Certificate
+
 
 {{?RFC8358}} specifies the conventions for digital signatures on
 Internet-Drafts. This is one of the intended use cases for the general
@@ -205,6 +208,7 @@ However, this does not restrict the CA from including multiple EKUs
 related to document signing.
 
 # Security Considerations
+
 
 The usage of id-kp-documentSigning EKU intends to prevent
 id-kp-emailProtection from being used for purposes other than email and
