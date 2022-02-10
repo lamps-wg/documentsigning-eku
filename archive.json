@@ -1,0 +1,375 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2022-02-10T00:22:09.447185+00:00",
+  "repo": "lamps-wg/documentsigning-eku",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    },
+    {
+      "name": "editorial",
+      "description": "An issue that does not affect the design of the protocol; does not require consensus.",
+      "color": "BFD4F2"
+    }
+  ],
+  "issues": [
+    {
+      "number": 2,
+      "id": "I_kwDOGkKB0c5BoaBd",
+      "title": "RFCs 7299 and 8358 seem Informative",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/2",
+      "state": "CLOSED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Upon further reflection it seems like RFC 7299 and 8358 are informative instead of normative references.",
+      "createdAt": "2022-01-13T03:03:38Z",
+      "updatedAt": "2022-01-13T18:39:02Z",
+      "closedAt": "2022-01-13T18:39:02Z",
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOGkKB0c5Bobq5",
+      "title": "Fix I-D Nits",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/3",
+      "state": "CLOSED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "I-D Nits complains about:\r\n\r\n- one line being too long: the 2nd line of the ASN.1 module\r\n- the abstract containing a reference: [RFC5280]",
+      "createdAt": "2022-01-13T03:10:10Z",
+      "updatedAt": "2022-02-08T17:17:39Z",
+      "closedAt": "2022-02-08T17:17:39Z",
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOGkKB0c5BzEup",
+      "title": "Russ' initial nits",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/6",
+      "state": "CLOSED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Section 4: s/prohibit conbinations/xxclude combinations/\r\n\r\nSection 4: s/anyEKU/anyExtendedKeyUsage/\r\n\r\nSection 6: s/none-email purposes/purposes other than email/\r\n\r\nNote the comment about the abstract was addressed via #3.",
+      "createdAt": "2022-01-14T16:57:52Z",
+      "updatedAt": "2022-02-08T17:32:55Z",
+      "closedAt": "2022-02-08T17:32:55Z",
+      "comments": [
+        {
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closed via #7 ",
+          "createdAt": "2022-02-08T17:32:55Z",
+          "updatedAt": "2022-02-08T17:32:55Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOGkKB0c5B489L",
+      "title": "change from \"EKUs\" to \"KeyPurposeIDs\" or \"EKU values\"",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/8",
+      "state": "OPEN",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "tadahik"
+      ],
+      "labels": [
+        "documentation"
+      ],
+      "body": "on the section 4, it seems better to change some of \"EKU\" to \"KeyPurposeId\" or \"EKU values\" to highlight following.\r\n\r\nexcluded EKUs procedures checks, whether EKU values contain some OID(KeyPurpiseId), or absence of EKU extension.\r\npermitted EKU procedures check, whether EKU values contain some OID(KeyPurposeId).",
+      "createdAt": "2022-01-17T06:56:58Z",
+      "updatedAt": "2022-02-06T12:55:08Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Current expression on \"Excluded EKUs procedure \" and \"Permitted EKU procedure\" seems unclear about whether that procedure prohibits or allows, \r\n- existence of certain key purpose identifier in the extended key usage value (partial match), OR \r\n- certain set of key purpose identifier is on key usage value(exact match).\r\n\r\nmy intension was the former.\r\nI will review, and will fix that expression if it were unclear.\r\n\r\nIn addition, I will add \r\n\"restrictions set is derived and implemented from (or configured with) the policy to which the implementation conforms.\"\r\nto clarify policy handling by RP or implementer.",
+          "createdAt": "2022-02-06T12:55:08Z",
+          "updatedAt": "2022-02-06T12:55:08Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOGkKB0c4wpvRu",
+      "title": "Fix expression",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/1",
+      "state": "MERGED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "This PR contains corrections to more accurate expression.\r\nThis PR does not contains modification related to backwards compatibility and interoperability.\r\n",
+      "createdAt": "2022-01-07T10:07:15Z",
+      "updatedAt": "2022-01-13T18:34:03Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "17d7bf26db6644ce140ac8a7635ae06f38b148b4",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "main",
+      "headRefOid": "d3a09fe1ec0b4f587ee43c8523c4429d7826e363",
+      "closedAt": "2022-01-13T18:34:03Z",
+      "mergedAt": "2022-01-13T18:34:03Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "dd321c627673d39924dd90621925db3703afe5a3"
+      },
+      "comments": [
+        {
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks Sean \r\nI approved all above modifications.",
+          "createdAt": "2022-01-13T10:31:39Z",
+          "updatedAt": "2022-01-13T10:31:39Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c4yvM0y",
+          "commit": {
+            "abbreviatedOid": "d84bd76"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Just nits really. Once fixed up. I will merge.",
+          "createdAt": "2022-01-13T04:15:53Z",
+          "updatedAt": "2022-01-13T04:22:03Z",
+          "comments": [
+            {
+              "originalPosition": 17,
+              "body": "While we're at it can we add a space between added and the reference to 7299?\r\n\r\nCan also r/OID/Object Identifier (OID)",
+              "createdAt": "2022-01-13T04:15:53Z",
+              "updatedAt": "2022-01-13T04:22:04Z"
+            },
+            {
+              "originalPosition": 20,
+              "body": "r/Object Ids/OIDs",
+              "createdAt": "2022-01-13T04:18:02Z",
+              "updatedAt": "2022-01-13T04:22:04Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "r/singes/signs",
+              "createdAt": "2022-01-13T04:18:28Z",
+              "updatedAt": "2022-01-13T04:22:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGkKB0c4yygZh",
+          "commit": {
+            "abbreviatedOid": "d3a09fe"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-01-13T18:33:43Z",
+          "updatedAt": "2022-01-13T18:33:43Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOGkKB0c4w5xTW",
+      "title": "Informal refs",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/4",
+      "state": "CLOSED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Resolves #2.",
+      "createdAt": "2022-01-13T04:41:20Z",
+      "updatedAt": "2022-01-13T04:47:11Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "17d7bf26db6644ce140ac8a7635ae06f38b148b4",
+      "headRepository": null,
+      "headRefName": "informal-refs",
+      "headRefOid": "bf0dee29344e9d678b391108b6ea932704e9d36c",
+      "closedAt": "2022-01-13T04:46:54Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "never mind will resubmit with all the readme.",
+          "createdAt": "2022-01-13T04:47:11Z",
+          "updatedAt": "2022-01-13T04:47:11Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOGkKB0c4w5yXn",
+      "title": "Make RFC 7299 & 8358 Informative Refs",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/5",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Resolves #2.",
+      "createdAt": "2022-01-13T04:51:17Z",
+      "updatedAt": "2022-01-13T18:39:03Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "dd321c627673d39924dd90621925db3703afe5a3",
+      "headRepository": "seanturner/documentsigning-eku",
+      "headRefName": "informal_ref",
+      "headRefOid": "61e465dc924dd27b78afadc8ef9f9cc5f291910f",
+      "closedAt": "2022-01-13T18:39:02Z",
+      "mergedAt": "2022-01-13T18:39:02Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "b7cc256fb5dbe6dd5e2831679590c092167dbd13"
+      },
+      "comments": [
+        {
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I reviewed and approved this pull request.",
+          "createdAt": "2022-01-13T10:36:19Z",
+          "updatedAt": "2022-01-13T10:36:19Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c4ywW3q",
+          "commit": {
+            "abbreviatedOid": "5840606"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-01-13T10:39:26Z",
+          "updatedAt": "2022-01-13T10:39:26Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOGkKB0c4xDQhR",
+      "title": "Fixing I-D nits",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/7",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Resolves #3.\r\n\r\nThis also made the references to RFCs 7229 and 8358 Informative references, as was approved by in PR#1.  More importantly, neither of these refs are required for implementation.\r\n\r\nThis also changes the line breaks in the .md hence it looks like a lot more changes than there really are. Done to aid readability.\r\n\r\n@tadahik please double check that the new formatting in s4 works. It seemed to the me that the paragraphs after \"2.\" were part of the numbered item so I indented them. The .md will result in the following .txt:\r\n\r\n    2.  If there are restrictions set for the replying party and relying\r\n        party software, proceed as following.\r\n\r\n        Each Restriction on the EKUs can be \"Excluded EKU\" or \"Permitted\r\n        EKU\" and handled.\r\n\r\n        The procedure is intended to permit or prohibit presence of a\r\n        certain EKU or complete absence of EKUs.  It is outside the scope\r\n        of this document, but the relying party can permit or prohibit\r\n        conbinations of EKU.  A consideration on prohibiting combination\r\n        of EKUs is described in the security consideration section of\r\n        this document.\r\n\r\n        Excluded EKUs procedure:  \"Excluded EKU\" is an EKU which the\r\n           relying party or the relying party software prohibits.\r\n           Examples of \"Excluded EKU\" are, presence of anyEKU or complete\r\n           absence of EKU extension on a certificate.  If an EKU of the\r\n           certificate meets the conditions set by the \"Excluded EKU\"\r\n           restriction, the relying party or the relying party software\r\n           rejects the certificate.\r\n\r\n        Permitted EKU procedure:  \"Permitted EKU\" is an EKU which the\r\n           relying party or the relying party software accepts.  Examples\r\n           of \"Permitted EKU\" are, presence of this general document\r\n           signing EKU and/or protocol specific document signing-type\r\n           EKUs.  If an EKU of the certificate meets the condition set by\r\n           a \"Permitted EKU\" restriction, the certificate is acceptable.\r\n           Otherwise, relying party or the relying party software rejects\r\n           the certificate.\r\n\r\n    When a single software has capability to process various data\r\n    formats, the software may choose to make the excluded and permitted\r\n    decisions separately in accordance with the format it is handling\r\n    (e.g. text, pdf, etc).",
+      "createdAt": "2022-01-14T17:24:25Z",
+      "updatedAt": "2022-02-08T17:17:39Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "cb76912fb0a511593ce2489feec8d50e55b331b1",
+      "headRepository": "seanturner/documentsigning-eku",
+      "headRefName": "fix_i-d_nits_0",
+      "headRefOid": "e30ba1e69c299c1b5dfdcdf45a2d3479ca7561f4",
+      "closedAt": "2022-02-08T17:17:39Z",
+      "mergedAt": "2022-02-08T17:17:39Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "9f2d14e988c337d223599ed8e4092e3c6a2a1133"
+      },
+      "comments": [
+        {
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Also Resolves #6.",
+          "createdAt": "2022-01-18T15:55:50Z",
+          "updatedAt": "2022-01-18T15:55:50Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c4y5cfe",
+          "commit": {
+            "abbreviatedOid": "54343ec"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "approved. after building into txt, it seems same in my environment also.\r\n",
+          "createdAt": "2022-01-17T06:26:06Z",
+          "updatedAt": "2022-01-17T07:30:46Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
