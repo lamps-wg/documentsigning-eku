@@ -101,8 +101,8 @@ use of any Subject names in the certificate is restricted to use by a
 document signing.
 
 Term of "Document Sign" in this document is digitally sign contents that
-are consumed by humans. To be more precise, contents are intended to be
-shown to human with printable or displayable form by means of services
+are consumed by people. To be more precise, contents are intended to be
+shown to person with printable or displayable form by means of services
 or software, rather than processed by machines.
 
 ## Extended Key Usage Values for Document Signing {#ext}
