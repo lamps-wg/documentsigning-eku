@@ -148,10 +148,10 @@ certificates signing those files except those which are defined by the
 software vendor.
 
 The signed contents of Internet-Drafts are primarily intended to be
-consumed by human. To be more precise, contents are intended to be shown
-to human in a printable or displayable form by means of services or
+consumed by people. To be more precise, contents are intended to be shown
+to a person in a printable or displayable form by means of services or
 software, rather than processed by machines. To validate the digital
-signature which is signed to contents intended to be consumed by human,
+signature on the contents that is intended to be consumed by people,
 implementations MAY perform the steps below as a certificate validation.
 
 The implementation MAY examine the Extended Key Usage value(s):
