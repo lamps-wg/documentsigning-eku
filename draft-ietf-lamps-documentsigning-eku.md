@@ -96,18 +96,11 @@ This document defines a general Document Signing extended key purpose identifier
 # Extended Key usage for DocumentSigning
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
+Inclusion of this KeyPurposeId in a certificate indicates that the
+use of any Subject names in the certificate is restricted to use by a
+document signing.
 
-As described in RFC5280, If the Extended Key Usage extension is present, 
-then the certificate MUST only be used for one of the purposes indicated.
-RFC5280 also describes that If multiple purposes are
-indicated the application need not recognize all purposes indicated,
-as long as the intended purpose is present.
-
-Document Signing applications May require that the extended key usage extension be present 
-and that a id-kp-documentSigning be indicated in order for the certificate to be acceptable 
-to that Document Signing application.
-
-Term of "Document Sign" (or "Document Signing") in this document is digitally sign (or signing)  contents that
+Term of "Document Sign" in this document is digitally sign contents that
 are consumed by humans. To be more precise, contents are intended to be
 shown to human with printable or displayable form by means of services
 or software, rather than processed by machines.
