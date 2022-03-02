@@ -138,8 +138,8 @@ Table of Contents
    document signing.
 
    Term of "Document Sign" in this document is digitally sign contents
-   that are consumed by humans.  To be more precise, contents are
-   intended to be shown to human with printable or displayable form by
+   that are consumed by people.  To be more precise, contents are
+   intended to be shown to person with printable or displayable form by
    means of services or software, rather than processed by machines.
 
 3.1.  Extended Key Usage Values for Document Signing
