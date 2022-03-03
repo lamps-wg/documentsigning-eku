@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-02-10T00:22:09.447185+00:00",
+  "timestamp": "2022-03-03T00:27:22.006986+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -367,6 +367,94 @@
           "body": "approved. after building into txt, it seems same in my environment also.\r\n",
           "createdAt": "2022-01-17T06:26:06Z",
           "updatedAt": "2022-01-17T07:30:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOGkKB0c4zyPLM",
+      "title": "Address some edits from wendy",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/9",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Wendy sent me these off list.",
+      "createdAt": "2022-03-02T04:50:45Z",
+      "updatedAt": "2022-03-02T05:14:44Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "9f2d14e988c337d223599ed8e4092e3c6a2a1133",
+      "headRepository": "seanturner/documentsigning-eku",
+      "headRefName": "wendyB",
+      "headRefOid": "304f80762d6e8c65a2137db0286d5e7bcaad7688",
+      "closedAt": "2022-03-02T05:14:44Z",
+      "mergedAt": "2022-03-02T05:14:44Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "8f4a7763172ff3c1be276ebbcd1bde1ccbda796f"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c41eLsn",
+          "commit": {
+            "abbreviatedOid": "304f807"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "It look good to me.",
+          "createdAt": "2022-03-02T05:13:51Z",
+          "updatedAt": "2022-03-02T05:13:51Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "PR_kwDOGkKB0c4zykH-",
+      "title": "Fix human",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/10",
+      "state": "MERGED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "seanturner"
+      ],
+      "labels": [],
+      "body": "there was two more remaining human.",
+      "createdAt": "2022-03-02T05:48:10Z",
+      "updatedAt": "2022-03-02T05:55:12Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "8f4a7763172ff3c1be276ebbcd1bde1ccbda796f",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "fix-human",
+      "headRefOid": "d4b649c9e0bab3d1a93b5ce2d9541140d4d113f0",
+      "closedAt": "2022-03-02T05:55:12Z",
+      "mergedAt": "2022-03-02T05:55:12Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "4c4d1646a8939b467ab8cf42743654b83a8e069c"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c41eQ36",
+          "commit": {
+            "abbreviatedOid": "d4b649c"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-03-02T05:55:02Z",
+          "updatedAt": "2022-03-02T05:55:02Z",
           "comments": []
         }
       ]
