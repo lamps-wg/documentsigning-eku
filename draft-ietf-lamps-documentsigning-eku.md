@@ -118,8 +118,10 @@ basic cryptographic operations for which the certified key may be used.
 
 The EKU extension syntax is repeated here for convenience:
 
-~~~ ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
-KeyPurposeId  ::=  OBJECT IDENTIFIER ~~~
+~~~
+  ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
+  KeyPurposeId  ::=  OBJECT IDENTIFIER
+~~~
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the
@@ -129,9 +131,12 @@ for authentication, message integrity, and non-repudiation of origin
 (using digital signatures, along with any usages allowed by other EKU
 values).
 
-~~~ id-kp  OBJECT IDENTIFIER  ::= { iso(1) identified-organization(3)
-dod(6) internet(1) security(5) mechanisms(5) pkix(7) 3 }
-id-kp-documentSigning  OBJECT IDENTIFIER  ::=  { id-kp XX } ~~~
+~~~
+  id-kp  OBJECT IDENTIFIER  ::=
+      { iso(1) identified-organization(3) dod(6) internet(1)
+        security(5) mechanisms(5) pkix(7) 3 }
+  id-kp-documentSigning  OBJECT IDENTIFIER  ::=  { id-kp XX }
+~~~
 
 # Using the Extended Key Purpose for Document Signing in a Certificate
 
@@ -201,6 +206,7 @@ decisions separately in accordance with the format it is handling (e.g.
 text, pdf, etc).
 
 # Implications for a Certification Authority
+
 The procedures and practices employed by a certification authority MUST
 ensure that the correct values for the EKU extension are inserted in
 each certificate that is issued. Unless certificates are governed by a
@@ -210,6 +216,7 @@ The inclusion of the id-kp-documentSigning KeyPurposeId does not
 preclude the inclusion of other KeyPurposeIds.
 
 # Security Considerations
+
 The usage of id-kp-documentSigning KeyPurposeId is to provide an
 alternative to id-kp-emailProtection being used for non-email purposes
 and id-kp-codeSigning being used to sign objects other than binary code.
@@ -247,6 +254,7 @@ is necessary by IANA.
 --- back
 
 # Appendix A. ASN.1 Module
+
 {:numbered="false"}
 
 The following ASN.1 module provides the complete definition of the
