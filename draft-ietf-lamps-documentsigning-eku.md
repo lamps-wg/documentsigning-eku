@@ -99,6 +99,7 @@ Signing.
 # Extended Key Purpose for Document Signing
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
+
 Inclusion of this KeyPurposeId in a certificate indicates that the use
 of the certified public key is allowed to be used for verifying the
 signature on a document.
@@ -111,8 +112,8 @@ means of services or software, rather than processed by machines.
 ## Including the Extended Key Purpose for Document Signing in Certificates {#ext}
 
 {{RFC5280}} specifies the EKU X.509 certificate extension for use on the
-Internet.  The extension indicates one or more purposes for which the
-certified public key is valid.  The EKU extension can be used in
+Internet. The extension indicates one or more purposes for which the
+certified public key is valid. The EKU extension can be used in
 conjunction with the key usage extension, which indicates the set of
 basic cryptographic operations for which the certified key may be used.
 
