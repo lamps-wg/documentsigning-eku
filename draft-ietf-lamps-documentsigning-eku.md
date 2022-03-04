@@ -126,11 +126,8 @@ The EKU extension syntax is repeated here for convenience:
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the
-Subject named in the certificate signed the document content, and the
-associated keys can be used by a document signing service or a software
-for authentication, message integrity, and non-repudiation of origin
-(using digital signatures, along with any usages allowed by other EKU
-values).
+public key encoded in the certificate has been certified to be used for
+cryptographic operations on contents that are consumed by people.
 
 ~~~
   id-kp  OBJECT IDENTIFIER  ::=
