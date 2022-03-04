@@ -89,8 +89,8 @@ etc.).
 Therefore, it is not favorable to use a vendor-defined KeyPurposeId for
 signing a document that is not governed by the vendor.
 
-This document defines a general Document Signing extended key purpose
-identifier.
+This document defines a extended key purpose identifier for Document
+Signing.
 
 # Conventions and Definitions
 
@@ -104,8 +104,8 @@ of the certified public key is allowed to be used for verifying the
 signature on a document.
 
 The term "Document Signing" in this document refers to digitally signing
-contents that are consumed by humans. To be more precise, contents are
-intended to be shown to human with printable or displayable form by
+contents that are consumed by people. To be more precise, contents are
+intended to be shown to people with printable or displayable form by
 means of services or software, rather than processed by machines.
 
 ## Including the Extended Key Purpose for Document Signing in Certificates {#ext}
@@ -144,13 +144,13 @@ regarding extended key purposes for certificates signing those files
 except those which are defined by the software vendor.
 
 The signed contents of Internet-Drafts are primarily intended to be
-consumed by humans. To be more precise, contents are intended to be
-shown to humans in a printable or displayable form by means of services
+consumed by people. To be more precise, contents are intended to be
+shown to people in a printable or displayable form by means of services
 or software, rather than processed by machines. The digital signature on
 the contents is to indicate to the recipient of the contents that the
 content has not changed since it was signed by the identity indicated as
 the subject of the certificate. To validate the digital signature which
-is signed on contents intended to be consumed by humans, implementations
+is signed on contents intended to be consumed by people, implementations
 MAY perform the steps below during certificate validation:
 
 The implementation MAY examine the KeyPurposeId(s) included in the
@@ -160,36 +160,42 @@ Extended Key Usage extension as follows:
 relying party software, the certificate is acceptable.
 
 2. If there are restrictions set for the replying party and relying
-party software, proceed as following.
+party software, then process the KeyPurposeId(s) as described below.
 
-Each restriction on “Excluded KeyPurposeId” or “Permitted KeyPurposeId”
-is handled as described below.
+  Each restriction on “Excluded KeyPurposeId” or “Permitted
+  KeyPurposeId” is handled as described below.
 
-This procedure is intended to permit or prohibit presence of a certain
-KeyPurposeId or complete absence of KeyPurposeIds. It is outside the
-scope of this document, but the relying party can permit or prohibit
-combinations of KeyPurposeIds. A consideration on prohibiting
-combinations of KeyPurposeIds is described in the security
-considerations section of this document.
+    This procedure is intended to permit or prohibit presence of a
+    certain KeyPurposeId or complete absence of KeyPurposeIds. It is
+    outside the scope of this document, but the relying party can permit
+    or prohibit combinations of KeyPurposeIds. A consideration on
+    prohibiting combinations of KeyPurposeIds is described in the
+    Security Considerations section of this document.
 
-2.1. Excluded KeyPurposeId procedure “Excluded KeyPurposeId” is a
-KeyPurposeId which the relying party or the relying party software
-prohibits. Examples of "Excluded KeyPurposeId" are, presence of the
-anyExtendedKeyUsage KeyPurposeId or complete absence of the EKU
-extension in a certificate. If a KeyPurposeId of the certificate meets
-the conditions set by the “Excluded KeyPurposeId” restriction, the
-relying party or the relying party software rejects the certificate.
+  Excluded KeyPurposeId procedure:
 
-2.2. Permitted KeyPurposeId procedure “Permitted KeyPurposeId” is a
-KeyPurposeId which the relying party or the relying party software
-accepts. Examples of “Permitted KeyPurposeId” are, presence of this
-general document signing KeyPurposeId and/or protocol specific document
-signing-type KeyPurposeIds. If a KeyPurposeId of the certificate meets
-the condition set by a “Permitted KeyPurposeId” restriction, the
-certificate is acceptable. Otherwise, relying party or the relying party
-software rejects the certificate.
 
-When a single software has the capability to process various data
+    “Excluded KeyPurposeId” is a
+    KeyPurposeId which the relying party or the relying party software
+    prohibits. Examples of "Excluded KeyPurposeId" are, presence of the
+    anyExtendedKeyUsage KeyPurposeId or complete absence of the EKU
+    extension in a certificate. If a KeyPurposeId of the certificate
+    meets the conditions set by the “Excluded KeyPurposeId” restriction,
+    the relying party or the relying party software rejects the
+    certificate.
+
+  Permitted KeyPurposeId procedure:
+  
+    “Permitted KeyPurposeId” is a KeyPurposeId which the relying party or
+    the relying party software accepts. Examples of “Permitted
+    KeyPurposeId” are, presence of this general document signing
+    KeyPurposeId and/or protocol specific document signing-type
+    KeyPurposeIds. If a KeyPurposeId of the certificate meets the
+    condition set by a “Permitted KeyPurposeId” restriction, the
+    certificate is acceptable. Otherwise, relying party or the relying
+    party software rejects the certificate.
+
+When a single application has the capability to process various data
 formats, the software may choose to make the excluded and permitted
 decisions separately in accordance with the format it is handling (e.g.
 text, pdf, etc).
@@ -247,28 +253,29 @@ The following ASN.1 module provides the complete definition of the
 Document Signing KeyPurposeId.
 
 ~~~
-   DocSignEKU { iso(1) identified-organization(3) dod(6) internet(1)
-   security(5) mechanisms(5) pkix(7) id-mod(0) id-mod-docsign-eku(TBD1) }
+  DocSignEKU { iso(1) identified-organization(3) dod(6) internet(1)
+    security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-mod-docsign-eku(TBD1) }
 
-   DEFINITIONS EXPLICIT TAGS ::=
+  DEFINITIONS EXPLICIT TAGS ::=
 
-   BEGIN
+  BEGIN
 
-   -- EXPORTS ALL --
+  -- EXPORTS ALL --
 
-   -- IMPORTS NOTHING --
+  -- IMPORTS NOTHING --
 
-   -- OID Arc --
+  -- OID Arc --
 
-   id-kp  OBJECT IDENTIFIER  ::= {
-     iso(1) identified-organization(3) dod(6) internet(1)
-     security(5) mechanisms(5) pkix(7) kp(3) }
+  id-kp  OBJECT IDENTIFIER  ::= {
+    iso(1) identified-organization(3) dod(6) internet(1)
+    security(5) mechanisms(5) pkix(7) kp(3) }
 
-   -- Document Signing Extended Key Usage --
+  -- Document Signing Extended Key Usage --
 
-   id-kp-documentSigning OBJECT IDENTIFIER ::= { id-kp TBD2 }
+  id-kp-documentSigning OBJECT IDENTIFIER ::= { id-kp TBD2 }
 
-   END
+  END
 ~~~
 
 # Acknowledgments
