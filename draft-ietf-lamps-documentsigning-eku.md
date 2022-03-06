@@ -262,7 +262,6 @@ is necessary by IANA.
 --- back
 
 # Appendix A. ASN.1 Module
-
 {:numbered="false"}
 
 The following ASN.1 module provides the complete definition of the
