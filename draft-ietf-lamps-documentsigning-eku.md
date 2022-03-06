@@ -106,7 +106,7 @@ signature on a document.
 
 The term "Document Signing" in this document refers to digitally signing
 contents that are consumed by people. To be more precise, contents are
-intended to be shown to people with printable or displayable form by
+intended to be shown to a person with printable or displayable form by
 means of services or software, rather than processed by machines.
 
 ## Including the Extended Key Purpose for Document Signing in Certificates {#ext}
@@ -148,7 +148,7 @@ except those which are defined by the software vendor.
 
 The signed contents of Internet-Drafts are primarily intended to be
 consumed by people. To be more precise, contents are intended to be
-shown to people in a printable or displayable form by means of services
+shown to a person in a printable or displayable form by means of services
 or software, rather than processed by machines. The digital signature on
 the contents is to indicate to the recipient of the contents that the
 content has not changed since it was signed by the identity indicated as
@@ -178,25 +178,25 @@ party software, then process the KeyPurposeId(s) as described below.
   Excluded KeyPurposeId procedure:
 
 
-    “Excluded KeyPurposeId” is a
-    KeyPurposeId which the relying party or the relying party software
-    prohibits. Examples of "Excluded KeyPurposeId" are, presence of the
-    anyExtendedKeyUsage KeyPurposeId or complete absence of the EKU
-    extension in a certificate. If a KeyPurposeId of the certificate
-    meets the conditions set by the “Excluded KeyPurposeId” restriction,
-    the relying party or the relying party software rejects the
-    certificate.
+    : “Excluded KeyPurposeId” is a
+KeyPurposeId which the relying party or the relying party software
+prohibits. Examples of "Excluded KeyPurposeId" are, presence of the
+anyExtendedKeyUsage KeyPurposeId or complete absence of the EKU
+extension in a certificate. If a KeyPurposeId of the certificate
+meets the conditions set by the “Excluded KeyPurposeId” restriction,
+the relying party or the relying party software rejects the
+certificate.
 
   Permitted KeyPurposeId procedure:
   
-    “Permitted KeyPurposeId” is a KeyPurposeId which the relying party or
-    the relying party software accepts. Examples of “Permitted
-    KeyPurposeId” are, presence of this general document signing
-    KeyPurposeId and/or protocol specific document signing-type
-    KeyPurposeIds. If a KeyPurposeId of the certificate meets the
-    condition set by a “Permitted KeyPurposeId” restriction, the
-    certificate is acceptable. Otherwise, relying party or the relying
-    party software rejects the certificate.
+    : “Permitted KeyPurposeId” is a KeyPurposeId which the relying party or
+the relying party software accepts. Examples of “Permitted
+KeyPurposeId” are, presence of this general document signing
+KeyPurposeId and/or protocol specific document signing-type
+KeyPurposeIds. If a KeyPurposeId of the certificate meets the
+condition set by a “Permitted KeyPurposeId” restriction, the
+certificate is acceptable. Otherwise, relying party or the relying
+party software rejects the certificate.
 
 When a single application has the capability to process various data
 formats, the software may choose to make the excluded and permitted
