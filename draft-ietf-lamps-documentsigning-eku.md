@@ -62,7 +62,7 @@ to that Document Signing application.
 
 {{!RFC5280}} specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates. In addition, several
-KeyPurposeIds have been added{{?RFC7299}} under the IANA repository "SMI
+KeyPurposeIds have been added {{?RFC7299}} under the IANA repository "SMI
 Security for PKIX Extended Key Purpose". While usage of the
 "anyExtendedKeyUsage" KeyPurposeId is bad practice for publicly trusted
 certificates, there is no public and general KeyPurposeId explicitly
@@ -198,7 +198,7 @@ the relying party or the relying party software rejects the
 certificate.
 
     Permitted KeyPurposeId procedure:
-  
+ 
     : “Permitted KeyPurposeId” is a KeyPurposeId which the relying party or
 the relying party software accepts. Examples of “Permitted
 KeyPurposeId” are, presence of this general document signing
