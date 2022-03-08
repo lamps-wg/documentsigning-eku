@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-03-03T00:27:22.006986+00:00",
+  "timestamp": "2022-03-08T00:23:17.308399+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -122,7 +122,7 @@
       "id": "I_kwDOGkKB0c5B489L",
       "title": "change from \"EKUs\" to \"KeyPurposeIDs\" or \"EKU values\"",
       "url": "https://github.com/lamps-wg/documentsigning-eku/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "tadahik",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -133,8 +133,8 @@
       ],
       "body": "on the section 4, it seems better to change some of \"EKU\" to \"KeyPurposeId\" or \"EKU values\" to highlight following.\r\n\r\nexcluded EKUs procedures checks, whether EKU values contain some OID(KeyPurpiseId), or absence of EKU extension.\r\npermitted EKU procedures check, whether EKU values contain some OID(KeyPurposeId).",
       "createdAt": "2022-01-17T06:56:58Z",
-      "updatedAt": "2022-02-06T12:55:08Z",
-      "closedAt": null,
+      "updatedAt": "2022-03-07T15:42:22Z",
+      "closedAt": "2022-03-07T15:42:22Z",
       "comments": [
         {
           "author": "tadahik",
@@ -458,6 +458,104 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 11,
+      "id": "PR_kwDOGkKB0c4z_4Ou",
+      "title": "use \"(extended) key purpose (identifier)\", and some additional fix",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/11",
+      "state": "CLOSED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Try to used KeyPurposeId (or key purpose, key purpose identifier, etc.), to express more accurately.\r\nAdd some changes, related with restrictive expression of document signing KeyPurposeId, etc.",
+      "createdAt": "2022-03-06T04:10:47Z",
+      "updatedAt": "2022-03-06T04:47:28Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "4c4d1646a8939b467ab8cf42743654b83a8e069c",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "EKU-to-EKUvalues-or-KeyPurposeId",
+      "headRefOid": "2c4876e4258ef16dc8d5d81f9ec907ead884efa0",
+      "closedAt": "2022-03-06T04:47:28Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOGkKB0c4z_6Qt",
+      "title": "Use \"(extended) key purpose (identifier)\", and some additional fix",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/12",
+      "state": "MERGED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "seanturner"
+      ],
+      "labels": [],
+      "body": "Try to used KeyPurposeId (or key purpose, key purpose identifier, etc.), to express more accurately.\r\nAdd some changes, related with restrictive expression of document signing KeyPurposeId, etc.",
+      "createdAt": "2022-03-06T05:32:21Z",
+      "updatedAt": "2022-03-07T15:42:21Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "4c4d1646a8939b467ab8cf42743654b83a8e069c",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "EKU-to-EKUvalues-or-KeyPurposeId",
+      "headRefOid": "e5e53b9290e136fb489c523befd272c2b9bcc058",
+      "closedAt": "2022-03-07T15:42:21Z",
+      "mergedAt": "2022-03-07T15:42:21Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "1640c542e547ff8ab8f259a2a75bb12a1de1daad"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c41wXcB",
+          "commit": {
+            "abbreviatedOid": "e5e53b9"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-03-07T15:42:14Z",
+          "updatedAt": "2022-03-07T15:42:14Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOGkKB0c40DVkd",
+      "title": "fixing nits",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/13",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-03-07T16:07:25Z",
+      "updatedAt": "2022-03-07T16:07:31Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "1640c542e547ff8ab8f259a2a75bb12a1de1daad",
+      "headRepository": "seanturner/documentsigning-eku",
+      "headRefName": "spt_nits1",
+      "headRefOid": "2e6a5ebbd3961f99e96480dd020e107356397b19",
+      "closedAt": "2022-03-07T16:07:31Z",
+      "mergedAt": "2022-03-07T16:07:31Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "22e26b98595fec625cb4f35197e83728eb4bdb49"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
