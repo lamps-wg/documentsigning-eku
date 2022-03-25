@@ -297,3 +297,5 @@ Document Signing KeyPurposeId.
 {:numbered="false"}
 
 We would like to thank Russ Housley for verifying the ASN.1 module.
+Additionally, we would like to thank Corey Bonnell, Wendy Brown, Russ
+Housley, Stefan Santesson for their comments.
