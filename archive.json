@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-03-08T00:23:17.308399+00:00",
+  "timestamp": "2022-03-27T00:30:40.170765+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -144,6 +144,22 @@
           "updatedAt": "2022-02-06T12:55:08Z"
         }
       ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOGkKB0c5GYIVi",
+      "title": "Add acknowledgements",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/14",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Include acknowledgements.",
+      "createdAt": "2022-03-25T12:21:26Z",
+      "updatedAt": "2022-03-25T12:21:26Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -556,6 +572,46 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOGkKB0c41A861",
+      "title": "Adding more acknowledgements",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/15",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Resolves #14.\r\n\r\nWill revise if more WGLC/IETF LC comments arrive.",
+      "createdAt": "2022-03-25T12:30:12Z",
+      "updatedAt": "2022-03-25T12:36:36Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "22e26b98595fec625cb4f35197e83728eb4bdb49",
+      "headRepository": "seanturner/documentsigning-eku",
+      "headRefName": "acks",
+      "headRefOid": "586e32b8723d2abcd09e9e1502653f21d8e620eb",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c427kP5",
+          "commit": {
+            "abbreviatedOid": "586e32b"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-03-25T12:36:36Z",
+          "updatedAt": "2022-03-25T12:36:36Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
