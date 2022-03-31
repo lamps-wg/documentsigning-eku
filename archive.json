@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-03-27T00:30:40.170765+00:00",
+  "timestamp": "2022-03-31T00:26:10.273561+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -612,6 +612,34 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOGkKB0c41VF_D",
+      "title": "editorial-fixes-by-WGLC",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/16",
+      "state": "OPEN",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "seanturner"
+      ],
+      "labels": [],
+      "body": "Some editorial fixes pointed during WGLC",
+      "createdAt": "2022-03-30T17:36:59Z",
+      "updatedAt": "2022-03-30T17:36:59Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "22e26b98595fec625cb4f35197e83728eb4bdb49",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "editorial-fixes-by-WGLC",
+      "headRefOid": "d20d91e31ad0c927a7a25dc65b3bbc4ebf023711",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
