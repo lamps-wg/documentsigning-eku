@@ -109,7 +109,7 @@ indicated the application need not recognize all purposes indicated,
 as long as the intended purpose is present.
 
 Document Signing applications MAY require that the Extended Key Usage extension be present 
-and that a id-kp-documentSigning be indicated in order for the certificate to be acceptable 
+and that the id-kp-documentSigning be indicated in order for the certificate to be acceptable 
 to that Document Signing application.
 
 The term "Document Signing" in this document refers to digitally signing
@@ -131,6 +131,8 @@ The EKU extension syntax is repeated here for convenience:
   ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
   KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
+As described in {{RFC5280}}, EKU extension may, 
+at the option of the certificate issuer, be either critical or non-critical.
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the
@@ -173,7 +175,7 @@ A Restriction on Extended Key Usage is derived and implemented from
 1. If there are no restrictions set for the relying party and the
 relying party software, the certificate is acceptable.
 
-2. If there are restrictions set for the replying party and relying
+2. If there are restrictions set for the relying party and relying
 party software, then process the KeyPurposeId(s) as described below.
 
     Each restriction on “Excluded KeyPurposeId” or “Permitted
@@ -198,7 +200,7 @@ the relying party or the relying party software rejects the
 certificate.
 
     Permitted KeyPurposeId procedure:
- 
+
     : “Permitted KeyPurposeId” is a KeyPurposeId which the relying party or
 the relying party software accepts. Examples of “Permitted
 KeyPurposeId” are, presence of this general document signing
@@ -242,7 +244,7 @@ their own KeyPurposeIds, some may not have significant motive or
 resources to set up and manage their own KeyPurposeIds. This general
 document signing KeyPurposeId may be used as a stop-gap for those that
 intend to define their own KeyPurposeId or those who do not intend to
-set up an KeyPurposeId but still would like to distinguish document
+set up a KeyPurposeId but still would like to distinguish document
 signing from other usages.
 
 Introduction of this id-kp-documentSigning KeyPurposeId does not
