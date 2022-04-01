@@ -148,9 +148,9 @@ Table of Contents
    purposes indicated, as long as the intended purpose is present.
 
    Document Signing applications MAY require that the Extended Key Usage
-   extension be present and that a id-kp-documentSigning be indicated in
-   order for the certificate to be acceptable to that Document Signing
-   application.
+   extension be present and that the id-kp-documentSigning be indicated
+   in order for the certificate to be acceptable to that Document
+   Signing application.
 
    The term "Document Signing" in this document refers to digitally
    signing contents that are consumed by people.  To be more precise,
@@ -172,6 +172,9 @@ Table of Contents
 
      ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
      KeyPurposeId  ::=  OBJECT IDENTIFIER
+
+   As described in [RFC5280], EKU extension may, at the option of the
+   certificate issuer, be either critical or non-critical.
 
    This specification defines the KeyPurposeId id-kp-documentSigning.
    Inclusion of this KeyPurposeId in a certificate indicates that the
@@ -212,7 +215,7 @@ Table of Contents
    1.  If there are no restrictions set for the relying party and the
        relying party software, the certificate is acceptable.
 
-   2.  If there are restrictions set for the replying party and relying
+   2.  If there are restrictions set for the relying party and relying
        party software, then process the KeyPurposeId(s) as described
        below.
 
@@ -236,16 +239,15 @@ Table of Contents
           the "Excluded KeyPurposeId" restriction, the relying party or
           the relying party software rejects the certificate.
 
-       Permitted KeyPurposeId procedure:
-
-       : "Permitted KeyPurposeId" is a KeyPurposeId which the relying
-       party or the relying party software accepts.  Examples of
-       "Permitted KeyPurposeId" are, presence of this general document
-       signing KeyPurposeId and/or protocol specific document signing-
-       type KeyPurposeIds.  If a KeyPurposeId of the certificate meets
-       the condition set by a "Permitted KeyPurposeId" restriction, the
-       certificate is acceptable.  Otherwise, relying party or the
-       relying party software rejects the certificate.
+       Permitted KeyPurposeId procedure:  "Permitted KeyPurposeId" is a
+          KeyPurposeId which the relying party or the relying party
+          software accepts.  Examples of "Permitted KeyPurposeId" are,
+          presence of this general document signing KeyPurposeId and/or
+          protocol specific document signing-type KeyPurposeIds.  If a
+          KeyPurposeId of the certificate meets the condition set by a
+          "Permitted KeyPurposeId" restriction, the certificate is
+          acceptable.  Otherwise, relying party or the relying party
+          software rejects the certificate.
 
    When a single application has the capability to process various data
    formats, the software may choose to make the excluded and permitted
@@ -283,7 +285,7 @@ Table of Contents
    resources to set up and manage their own KeyPurposeIds.  This general
    document signing KeyPurposeId may be used as a stop-gap for those
    that intend to define their own KeyPurposeId or those who do not
-   intend to set up an KeyPurposeId but still would like to distinguish
+   intend to set up a KeyPurposeId but still would like to distinguish
    document signing from other usages.
 
    Introduction of this id-kp-documentSigning KeyPurposeId does not

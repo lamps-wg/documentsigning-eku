@@ -1246,7 +1246,7 @@ then the certificate MUST only be used for one of the purposes indicated.
 indicated the application need not recognize all purposes indicated,
 as long as the intended purpose is present.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">Document Signing applications MAY require that the Extended Key Usage extension be present 
-and that a id-kp-documentSigning be indicated in order for the certificate to be acceptable 
+and that the id-kp-documentSigning be indicated in order for the certificate to be acceptable 
 to that Document Signing application.<a href="#section-3-3" class="pilcrow">¶</a></p>
 <p id="section-3-4">The term "Document Signing" in this document refers to digitally signing
 contents that are consumed by people. To be more precise, contents are
@@ -1269,17 +1269,19 @@ basic cryptographic operations for which the certified key may be used.<a href="
   KeyPurposeId  ::=  OBJECT IDENTIFIER
 </pre><a href="#section-3.1-3" class="pilcrow">¶</a>
 </div>
-<p id="section-3.1-4">This specification defines the KeyPurposeId id-kp-documentSigning.
+<p id="section-3.1-4">As described in <span>[<a href="#RFC5280" class="xref">RFC5280</a>]</span>, EKU extension may, 
+at the option of the certificate issuer, be either critical or non-critical.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<p id="section-3.1-5">This specification defines the KeyPurposeId id-kp-documentSigning.
 Inclusion of this KeyPurposeId in a certificate indicates that the
 public key encoded in the certificate has been certified to be used for
-cryptographic operations on contents that are consumed by people.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-3.1-5">
+cryptographic operations on contents that are consumed by people.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.1-6">
 <pre>
   id-kp  OBJECT IDENTIFIER  ::=
       { iso(1) identified-organization(3) dod(6) internet(1)
         security(5) mechanisms(5) pkix(7) 3 }
   id-kp-documentSigning  OBJECT IDENTIFIER  ::=  { id-kp XX }
-</pre><a href="#section-3.1-5" class="pilcrow">¶</a>
+</pre><a href="#section-3.1-6" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -1315,7 +1317,7 @@ A Restriction on Extended Key Usage is derived and implemented from
 relying party software, the certificate is acceptable.<a href="#section-4-4.1" class="pilcrow">¶</a>
 </li>
         <li id="section-4-4.2">
-          <p id="section-4-4.2.1">If there are restrictions set for the replying party and relying
+          <p id="section-4-4.2.1">If there are restrictions set for the relying party and relying
 party software, then process the KeyPurposeId(s) as described below.<a href="#section-4-4.2.1" class="pilcrow">¶</a></p>
 <p id="section-4-4.2.2">
 Each restriction on "Excluded KeyPurposeId" or "Permitted
@@ -1339,19 +1341,20 @@ meets the conditions set by the "Excluded KeyPurposeId" restriction,
 the relying party or the relying party software rejects the
 certificate.<a href="#section-4-4.2.4.2.1" class="pilcrow">¶</a></p>
 </dd>
-          <dd class="break"></dd>
-</dl>
-<p id="section-4-4.2.5">
-Permitted KeyPurposeId procedure:<a href="#section-4-4.2.5" class="pilcrow">¶</a></p>
-<p id="section-4-4.2.6">
-: "Permitted KeyPurposeId" is a KeyPurposeId which the relying party or
+            <dd class="break"></dd>
+<dt id="section-4-4.2.4.3">Permitted KeyPurposeId procedure:</dt>
+            <dd style="margin-left: 1.5em" id="section-4-4.2.4.4">
+              <p id="section-4-4.2.4.4.1">"Permitted KeyPurposeId" is a KeyPurposeId which the relying party or
 the relying party software accepts. Examples of "Permitted
 KeyPurposeId" are, presence of this general document signing
 KeyPurposeId and/or protocol specific document signing-type
 KeyPurposeIds. If a KeyPurposeId of the certificate meets the
 condition set by a "Permitted KeyPurposeId" restriction, the
 certificate is acceptable. Otherwise, relying party or the relying
-party software rejects the certificate.<a href="#section-4-4.2.6" class="pilcrow">¶</a></p>
+party software rejects the certificate.<a href="#section-4-4.2.4.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+</dl>
 </li>
       </ol>
 <p id="section-4-5">When a single application has the capability to process various data
@@ -1394,7 +1397,7 @@ their own KeyPurposeIds, some may not have significant motive or
 resources to set up and manage their own KeyPurposeIds. This general
 document signing KeyPurposeId may be used as a stop-gap for those that
 intend to define their own KeyPurposeId or those who do not intend to
-set up an KeyPurposeId but still would like to distinguish document
+set up a KeyPurposeId but still would like to distinguish document
 signing from other usages.<a href="#section-6-3" class="pilcrow">¶</a></p>
 <p id="section-6-4">Introduction of this id-kp-documentSigning KeyPurposeId does not
 introduce any new security or privacy concerns.<a href="#section-6-4" class="pilcrow">¶</a></p>
