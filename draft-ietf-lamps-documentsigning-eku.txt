@@ -5,10 +5,10 @@
 LAMPS Working Group                                               T. Ito
 Internet-Draft                                           SECOM CO., LTD.
 Intended status: Standards Track                                T. Okubo
-Expires: 8 September 2022                                 DigiCert, Inc.
+Expires: 3 October 2022                                   DigiCert, Inc.
                                                                S. Turner
                                                                    sn3rd
-                                                            7 March 2022
+                                                            1 April 2022
 
 
   General Purpose Extended Key Usage (EKU) for Document Signing X.509
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 September 2022.
+   This Internet-Draft will expire on 3 October 2022.
 
 Copyright Notice
 
@@ -365,6 +365,8 @@ Appendix A.  ASN.1 Module
 Acknowledgments
 
    We would like to thank Russ Housley for verifying the ASN.1 module.
+   Additionally, we would like to thank Corey Bonnell, Wendy Brown, Russ
+   Housley, Prachi Jain, and Stefan Santesson for their comments.
 
 Authors' Addresses
 
