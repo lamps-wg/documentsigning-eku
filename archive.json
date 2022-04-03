@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-03-31T00:26:10.273561+00:00",
+  "timestamp": "2022-04-03T00:28:34.323760+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -150,15 +150,15 @@
       "id": "I_kwDOGkKB0c5GYIVi",
       "title": "Add acknowledgements",
       "url": "https://github.com/lamps-wg/documentsigning-eku/issues/14",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "seanturner",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Include acknowledgements.",
       "createdAt": "2022-03-25T12:21:26Z",
-      "updatedAt": "2022-03-25T12:21:26Z",
-      "closedAt": null,
+      "updatedAt": "2022-04-01T03:12:12Z",
+      "closedAt": "2022-04-01T03:12:12Z",
       "comments": []
     }
   ],
@@ -578,24 +578,26 @@
       "id": "PR_kwDOGkKB0c41A861",
       "title": "Adding more acknowledgements",
       "url": "https://github.com/lamps-wg/documentsigning-eku/pull/15",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "seanturner",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Resolves #14.\r\n\r\nWill revise if more WGLC/IETF LC comments arrive.",
       "createdAt": "2022-03-25T12:30:12Z",
-      "updatedAt": "2022-03-25T12:36:36Z",
+      "updatedAt": "2022-04-01T03:12:12Z",
       "baseRepository": "lamps-wg/documentsigning-eku",
       "baseRefName": "main",
       "baseRefOid": "22e26b98595fec625cb4f35197e83728eb4bdb49",
       "headRepository": "seanturner/documentsigning-eku",
       "headRefName": "acks",
-      "headRefOid": "586e32b8723d2abcd09e9e1502653f21d8e620eb",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "896eed1081b1e46ec973942f59e40d2407f59548",
+      "closedAt": "2022-04-01T03:12:12Z",
+      "mergedAt": "2022-04-01T03:12:12Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "41d3438ec91eb84813e69546a3440b16bb94da2b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -610,6 +612,19 @@
           "createdAt": "2022-03-25T12:36:36Z",
           "updatedAt": "2022-03-25T12:36:36Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOGkKB0c43S3HQ",
+          "commit": {
+            "abbreviatedOid": "896eed1"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "approved",
+          "createdAt": "2022-03-31T14:35:35Z",
+          "updatedAt": "2022-03-31T14:35:35Z",
+          "comments": []
         }
       ]
     },
@@ -618,7 +633,7 @@
       "id": "PR_kwDOGkKB0c41VF_D",
       "title": "editorial-fixes-by-WGLC",
       "url": "https://github.com/lamps-wg/documentsigning-eku/pull/16",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "tadahik",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -627,19 +642,35 @@
       "labels": [],
       "body": "Some editorial fixes pointed during WGLC",
       "createdAt": "2022-03-30T17:36:59Z",
-      "updatedAt": "2022-03-30T17:36:59Z",
+      "updatedAt": "2022-04-01T03:14:53Z",
       "baseRepository": "lamps-wg/documentsigning-eku",
       "baseRefName": "main",
       "baseRefOid": "22e26b98595fec625cb4f35197e83728eb4bdb49",
       "headRepository": "tadahik/documentsigning-eku",
       "headRefName": "editorial-fixes-by-WGLC",
       "headRefOid": "d20d91e31ad0c927a7a25dc65b3bbc4ebf023711",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2022-04-01T03:14:52Z",
+      "mergedAt": "2022-04-01T03:14:52Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "bf87257ac0384798c9578c97dba307f94ac61971"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c43Vh12",
+          "commit": {
+            "abbreviatedOid": "d20d91e"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-04-01T03:14:38Z",
+          "updatedAt": "2022-04-01T03:14:38Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
