@@ -104,9 +104,9 @@ Signing.
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 
-As described in {{RFC5280}}, "¥[i¥]f the ¥[Extended Key Usage¥] extension is present, 
+As described in {{RFC5280}}, "\[i\]f the \[Extended Key Usage\] extension is present, 
 then the certificate MUST only be used for one of the purposes indicated."  
-{{RFC5280}} also describes that "¥[i¥]f multiple ¥[key¥] purposes are indicated 
+{{RFC5280}} also describes that "\[i\]f multiple \[key\] purposes are indicated 
 the application need not recognize all purposes indicated, 
 as long as the intended purpose is present."
 
