@@ -165,10 +165,10 @@ Extended Key Usage extension.
 Restrictions on Extended Key Usage is derived and implemented from 
 (or configured with) the policy to which the implementation conforms.
 
--  If there are no restrictions set for the relying party and the
+- If there are no restrictions set for the relying party and the
 relying party software, the certificate is acceptable.
 
--  If there are restrictions set for the relying party and relying
+- If there are restrictions set for the relying party and relying
 party software, then process the KeyPurposeId(s) as described below.
 
     This procedure is intended to permit or prohibit presence of a
