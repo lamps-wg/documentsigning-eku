@@ -50,10 +50,10 @@ normative:
 RFC5280 specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates. This document defines a general
 purpose document signing KeyPurposeId for inclusion in the Extended Key
-Usage (EKU) extension of X.509 public key certificates. 
-Document Signing applications may require that the EKU extension 
-be present and that a document signing KeyPurposeId be indicated 
-in order for the certificate to be acceptable 
+Usage (EKU) extension of X.509 public key certificates.
+Document Signing applications may require that the EKU extension
+be present and that a document signing KeyPurposeId be indicated
+in order for the certificate to be acceptable
 to that Document Signing application.
 
 --- middle
@@ -70,23 +70,23 @@ assigned for Document Signing. The current practice is to
 use id-kp-emailProtection, id-kp-codeSigning or a vendor-defined
 KeyPurposeId for general document signing purposes.
 
-In circumstances where code signing and S/MIME certificates are also 
-used for document signing, technical or policy changes made to the 
-code signing and S/MIME ecosystem may cause unexpected behaviors or 
+In circumstances where code signing and S/MIME certificates are also
+used for document signing, technical or policy changes made to the
+code signing and S/MIME ecosystem may cause unexpected behaviors or
 have an adverse impact such as decreased cryptographic
 agility on the document signing ecosystem and vice versa.
 
-There is no issue if the vendor-defined KeyPurposeIds are used in a PKI 
+There is no issue if the vendor-defined KeyPurposeIds are used in a PKI
 governed by the vendor or a set of specific group of vendors. However, if the
 KeyPurposeId is used outside of vendor governance, the usage can easily
-become out of control. 
+become out of control.
 For instance, when the end user encounters certificates with 
 vendor-defined KeyPurposeIds, they might want to ask that vendor about
-use of the certificate. 
-However, if those certificates were not governed by the KeyPurposeIds owner 
-but by another vendor, the vender who own the KeyPurposeIds 
+use of the certificate.
+However, if those certificates were not governed by the KeyPurposeIds owner
+but by another vendor, the vender who own the KeyPurposeIds
 may not able to control use, or even do not know about the use. - If the issuance of the cert is not under the control
-of the KeyPurposeIds owner, It is hard to estimate the impact of change 
+of the KeyPurposeIds owner, It is hard to estimate the impact of change
 to made on the KeyPurposeId. Changes related to KeyPurposeIds possibly
 make negative impacts that some group of people do not tolerate, and it could become a migration agility issue.
 
@@ -107,7 +107,7 @@ This specification defines the KeyPurposeId id-kp-documentSigning.
 As described in {{RFC5280}}, \"\[i\]f the \[Extended Key Usage\] extension is present,
 then the certificate MUST only be used for one of the purposes indicated.\"
 {{RFC5280}} also describes that \"\[i\]f multiple \[key\] purposes are indicated
-the application need not recognize all purposes indicated, 
+the application need not recognize all purposes indicated,
 as long as the intended purpose is present.\"
 
 Document Signing applications MAY require that the Extended Key Usage extension be present
@@ -133,7 +133,7 @@ The EKU extension syntax is repeated here for convenience:
   ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
   KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
-As described in {{RFC5280}}, EKU extension may, 
+As described in {{RFC5280}}, EKU extension may,
 at the option of the certificate issuer, be either critical or non-critical.
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
@@ -162,7 +162,7 @@ MAY perform the steps below during certificate validation:
 
 The following procedure is used to examine the KeyPurposeId(s) included in the
 Extended Key Usage extension.
-Restrictions on Extended Key Usage is derived and implemented from 
+Restrictions on Extended Key Usage is derived and implemented from
 (or configured with) the policy to which the implementation conforms.
 
 - If there are no restrictions set for the relying party and the
@@ -227,8 +227,8 @@ alternative to id-kp-emailProtection being used for non-email purposes
 and id-kp-codeSigning being used to sign objects other than binary code.
 This extended key purpose does not introduce new security risks but
 instead reduces existing security risks by providing means to separate
-other extended key purposes used for communication protocols namely, 
-TLS (id-kp-clientAuth) or S/MIME (id-kp-emailProtection) etc. 
+other extended key purposes used for communication protocols namely,
+TLS (id-kp-clientAuth) or S/MIME (id-kp-emailProtection) etc.
 in order to minimize the risk of cross-protocol attacks.
 
 To reduce the risk of specific cross-protocol attacks, the relying party
