@@ -104,14 +104,14 @@ Signing.
 
 This specification defines the KeyPurposeId id-kp-documentSigning.
 
-As described in {{RFC5280}}, \"\[i\]f the \[Extended Key Usage\] extension is present, 
+As described in {{RFC5280}}, \"\[i\]f the \[Extended Key Usage\] extension is present,
 then the certificate MUST only be used for one of the purposes indicated.\"
-{{RFC5280}} also describes that \"\[i\]f multiple \[key\] purposes are indicated 
+{{RFC5280}} also describes that \"\[i\]f multiple \[key\] purposes are indicated
 the application need not recognize all purposes indicated, 
 as long as the intended purpose is present.\"
 
-Document Signing applications MAY require that the Extended Key Usage extension be present 
-and that the id-kp-documentSigning be indicated in order for the certificate to be acceptable 
+Document Signing applications MAY require that the Extended Key Usage extension be present
+and that the id-kp-documentSigning be indicated in order for the certificate to be acceptable
 to that Document Signing application.
 
 The term "Document Signing" in this document refers to digitally signing
@@ -174,13 +174,13 @@ party software, then process the KeyPurposeId(s) as described below.
     This procedure is intended to permit or prohibit presence of a
 certain KeyPurposeId or complete absence of KeyPurposeIds. It is
 outside the scope of this document, but the relying party can permit
-or prohibit combinations of KeyPurposeIds, instead of single KeyPurposeId. 
+or prohibit combinations of KeyPurposeIds, instead of single KeyPurposeId.
 A consideration on
 prohibiting combinations of KeyPurposeIds is described in the
 Security Considerations section of this document.
 If both “Excluded KeyPurposeId” and “Permitted KeyPurposeId” exists,
-the relying party or the relying party software proresses each restriction 
-on “Excluded KeyPurposeId” first, and then processes each restriction on 
+the relying party or the relying party software proresses each restriction
+on “Excluded KeyPurposeId” first, and then processes each restriction on
 “Permitted KeyPurposeId”.
 
     Excluded KeyPurposeId procedure:
