@@ -80,7 +80,7 @@ There is no issue if the vendor-defined KeyPurposeIds are used in a PKI
 governed by the vendor or a set of specific group of vendors. However, if the
 KeyPurposeId is used outside of vendor governance, the usage can easily
 become out of control.
-For instance, when the end user encounters certificates with 
+For instance, when the end user encounters certificates with
 vendor-defined KeyPurposeIds, they might want to ask that vendor about
 use of the certificate.
 However, if those certificates were not governed by the KeyPurposeIds owner
