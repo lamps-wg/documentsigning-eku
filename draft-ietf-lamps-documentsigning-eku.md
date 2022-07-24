@@ -87,7 +87,7 @@ However, if those certificates were not governed by the KeyPurposeIds owner
 but by another vendor, the vender who own the KeyPurposeIds 
 may not able to control use, or even do not know about the use. - If the issuance of the cert is not under the control
 of the KeyPurposeIds owner, It is hard to estimate the impact of change 
-to made on the KeyPurposeId. Changes related to KeyPurposeIds possibly  
+to made on the KeyPurposeId. Changes related to KeyPurposeIds possibly
 make negative impacts that some group of people do not tolerate, and it could become a migration agility issue.
 
 Therefore, it is not favorable to use a vendor-defined KeyPurposeId for
@@ -105,7 +105,7 @@ Signing.
 This specification defines the KeyPurposeId id-kp-documentSigning.
 
 As described in {{RFC5280}}, \"\[i\]f the \[Extended Key Usage\] extension is present, 
-then the certificate MUST only be used for one of the purposes indicated.\"  
+then the certificate MUST only be used for one of the purposes indicated.\"
 {{RFC5280}} also describes that \"\[i\]f multiple \[key\] purposes are indicated 
 the application need not recognize all purposes indicated, 
 as long as the intended purpose is present.\"
