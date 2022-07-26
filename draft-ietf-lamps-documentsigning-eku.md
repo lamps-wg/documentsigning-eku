@@ -63,7 +63,7 @@ to that Document Signing application.
 {{!RFC5280}} specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates. In addition, several
 KeyPurposeIds have been added under the IANA repository "SMI
-Security for PKIX Extended Key Purpose"{{?RFC7299}}. While usage of the
+Security for PKIX Extended Key Purpose" {{?RFC7299}}. While usage of the
 "anyExtendedKeyUsage" KeyPurposeId is bad practice for publicly trusted
 certificates, there is no public and general KeyPurposeId explicitly
 assigned for Document Signing. The current practice is to
