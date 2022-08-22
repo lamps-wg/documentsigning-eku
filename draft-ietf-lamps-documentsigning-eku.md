@@ -145,7 +145,7 @@ cryptographic operations on contents that are consumed by people.
   id-kp  OBJECT IDENTIFIER  ::=
       { iso(1) identified-organization(3) dod(6) internet(1)
         security(5) mechanisms(5) pkix(7) 3 }
-  id-kp-documentSigning  OBJECT IDENTIFIER  ::=  { id-kp XX }
+  id-kp-documentSigning  OBJECT IDENTIFIER  ::=  { id-kp TBD2 }
 ~~~
 
 # Using the Extended Key Purpose for Document Signing in a Certificate
@@ -248,15 +248,15 @@ introduce any new security or privacy concerns.
 
 # IANA Considerations
 
-This document requests that IANA make two assignments. One assignment is
-for the addition of the id-kp-documentSigning object identifier (OID),
-as defined in {{ext}}, to the "SMI Security for PKIX Extended Key
-Purpose" (1.3.6.1.5.5.7.3) registry. The other assignment is for the
-addition of the id-mod-docsign-eku ASN.1 module {{X.680}} object
-identifier (OID), as defined in Appendix A, to the "SMI Security for
-PKIX Module Identifier" (1.3.6.1.5.5.7.0) registry.  No further action
-is necessary by IANA.
+IANA is requested to make one assignment for the TBD2 in the id-kp-
+documentSigning object identifier (OID), as defined in Section 3.1, in the "SMI
+Security for PKIX Extended Key Purpose" (1.3.6.1.5.5.7.3) registry. The other
+assignment for the TBD1 in Appendix A for the id-mod-docsign-eku ASN.1
+module [X.680] object identifier (OID), as defined in Appendix A, in the "SMI
+Security for PKIX Module Identifier" (1.3.6.1.5.5.7.0) registry.
 
+NOTE to the RFC Editor: After the assignment is made, the “for the TBD*”
+phrase can be dropped prior to publication as an RFC.
 --- back
 
 # Appendix A. ASN.1 Module
