@@ -117,7 +117,8 @@ to that Document Signing application.
 The term "Document Signing" in this document refers to digitally signing
 contents that are consumed by people. To be more precise, contents are
 intended to be shown to a person with printable or displayable form by
-means of services or software, rather than processed by machines.
+means of services or software, rather than primarily processed by
+machines.
 
 ## Including the Extended Key Purpose for Document Signing in Certificates {#ext}
 
@@ -174,7 +175,8 @@ party software, then process the KeyPurposeId(s) as described below.
     This procedure is intended to permit or prohibit presence of a
 certain KeyPurposeId or complete absence of KeyPurposeIds. It is
 outside the scope of this document, but the relying party can permit
-or prohibit combinations of KeyPurposeIds, instead of single KeyPurposeId.
+or prohibit combinations of KeyPurposeIds, instead of a single
+KeyPurposeId.
 A consideration on
 prohibiting combinations of KeyPurposeIds is described in the
 Security Considerations section of this document.
