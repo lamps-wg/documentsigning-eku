@@ -150,8 +150,8 @@ cryptographic operations on contents that are consumed by people.
 
 # Using the Extended Key Purpose for Document Signing in a Certificate
 
-The signed contents of documents are primarily intended to be
-consumed by people. To be more precise, contents are intended to be
+Our intended use case is people consuming the contents of signed
+documents. To be more precise, contents are intended to be
 shown to a person in a printable or displayable form by means of services
 or software, rather than processed by machines. The digital signature on
 the contents is to indicate to the recipient of the contents that the
