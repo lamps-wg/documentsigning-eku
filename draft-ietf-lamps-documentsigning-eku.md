@@ -84,7 +84,7 @@ For instance, when the end user encounters certificates with
 vendor-defined KeyPurposeIds, they might want to ask that vendor about
 use of the certificate.
 However, if those certificates were not governed by the KeyPurposeIds owner
-but by another vendor, the vender who own the KeyPurposeIds
+but by another vendor, the vendor who own the KeyPurposeIds
 may not able to control use, or even do not know about the use. - If the issuance of the cert is not under the control
 of the KeyPurposeIds owner, it is hard to estimate the impact of change
 to made on the KeyPurposeId. Changes related to KeyPurposeIds possibly
@@ -151,8 +151,8 @@ cryptographic operations on contents that are consumed by people.
 
 # Using the Extended Key Purpose for Document Signing in a Certificate
 
-The signed contents of Internet-Drafts are primarily intended to be
-consumed by people. To be more precise, contents are intended to be
+Our intended use case is people consuming the contents of signed
+documents. To be more precise, contents are intended to be
 shown to a person in a printable or displayable form by means of services
 or software, rather than processed by machines. The digital signature on
 the contents is to indicate to the recipient of the contents that the
@@ -181,7 +181,7 @@ A consideration on
 prohibiting combinations of KeyPurposeIds is described in the
 Security Considerations section of this document.
 If both “Excluded KeyPurposeId” and “Permitted KeyPurposeId” exists,
-the relying party or the relying party software proresses each restriction
+the relying party or the relying party software processes each restriction
 on “Excluded KeyPurposeId” first, and then processes each restriction on
 “Permitted KeyPurposeId”.
 
@@ -209,8 +209,8 @@ party software rejects the certificate.
 
 When a single application has the capability to process various data
 formats, the software may choose to make the excluded and permitted
-decisions separately in accordance with the format it is handling (e.g.
-text, pdf, etc).
+decisions separately in accordance with the format it is handling (e.g.,
+TEXT, PDF).
 
 # Implications for a Certification Authority
 
