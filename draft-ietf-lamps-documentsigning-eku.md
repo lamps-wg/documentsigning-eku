@@ -47,7 +47,7 @@ normative:
 
 --- abstract
 
-RFC5280 specifies several extended key purpose identifiers
+RFC 5280 specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates. This document defines a general
 purpose document signing KeyPurposeId for inclusion in the Extended Key
 Usage (EKU) extension of X.509 public key certificates.
@@ -76,19 +76,12 @@ code signing and S/MIME ecosystem may cause unexpected behaviors or
 have an adverse impact such as decreased cryptographic
 agility on the document signing ecosystem and vice versa.
 
-There is no issue if the vendor-defined KeyPurposeIds are used in a PKI
-governed by the vendor or a set of specific group of vendors. However, if the
-KeyPurposeId is used outside of vendor governance, the usage can easily
-become out of control.
-For instance, when the end user encounters certificates with
-vendor-defined KeyPurposeIds, they might want to ask that vendor about
-use of the certificate.
-However, if those certificates were not governed by the KeyPurposeIds owner
-but by another vendor, the vendor who own the KeyPurposeIds
-may not able to control use, or even do not know about the use. - If the issuance of the cert is not under the control
-of the KeyPurposeIds owner, it is hard to estimate the impact of change
-to made on the KeyPurposeId. Changes related to KeyPurposeIds possibly
-make negative impacts that some group of people do not tolerate, and it could become a migration agility issue.
+Vendor-defined KeyPurposeIds that are used in a PKI governed by the
+vendor or a group of vendors poses no interoperability concern.
+Appropriating, or misappropriating as the case may be, KeyPurposeIDs
+for use outside of their originally intended vendor or group of vendors
+controlled environment can introduce problems, the impact of which is
+difficult to determine.
 
 Therefore, it is not favorable to use a vendor-defined KeyPurposeId for
 signing a document that is not governed by the vendor.
@@ -241,7 +234,7 @@ While a specific protocol or signing scheme may choose to come up with
 their own KeyPurposeIds, some may not have significant motive or
 resources to set up and manage their own KeyPurposeIds. This general
 document signing KeyPurposeId may be used as a stop-gap for those that
-intend to define their own KeyPurposeId or those who do not intend to
+intend to define their own document signing KeyPurposeId or those who do not intend to
 set up a KeyPurposeId but still would like to distinguish document
 signing from other usages.
 
