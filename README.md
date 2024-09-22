@@ -5,7 +5,7 @@ This is the working area for the [IETF LAMPS Working Gorup](https://datatracker.
 * [Editor's Copy](https://lamps-wg.github.io/documentsigning-eku/draft-ietf-lamps-documentsigning-eku.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-documentsigning-eku/)
 * [Working Group Draft](https://www.ietf.org/archive/id/draft-ietf-lamps-documentsigning-eku-00.html)
-* [Compare Editor's Copy to Working Group Draft](https://www.ietf.org/rfcdiff?url1=draft-ietf-lamps-documentsigning-eku&url2=https://lamps-wg.github.io/documentsigning-eku/draft-ietf-lamps-documentsigning-eku.txt)
+* [Compare Editor's Copy to RFC](https://author-tools.ietf.org/diff?doc_1=rfc9336&url_2=https://lamps-wg.github.io/documentsigning-eku/draft-ietf-lamps-documentsigning-eku.txt)
 
 
 ## Contributing
