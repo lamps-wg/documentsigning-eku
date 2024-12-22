@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-04-03T00:28:34.323760+00:00",
+  "timestamp": "2024-12-22T01:11:54.604043+00:00",
   "repo": "lamps-wg/documentsigning-eku",
   "labels": [
     {
@@ -159,6 +159,24 @@
       "createdAt": "2022-03-25T12:21:26Z",
       "updatedAt": "2022-04-01T03:12:12Z",
       "closedAt": "2022-04-01T03:12:12Z",
+      "comments": []
+    },
+    {
+      "number": 23,
+      "id": "I_kwDOGkKB0c5iC4vV",
+      "title": "Update text to match RFC 9336",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/issues/23",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "seanturner"
+      ],
+      "labels": [],
+      "body": "Do a diff to collect the AUTH48 changes and reflect them here.",
+      "createdAt": "2023-03-29T02:19:05Z",
+      "updatedAt": "2023-03-29T02:19:30Z",
+      "closedAt": null,
       "comments": []
     }
   ],
@@ -671,6 +689,383 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 17,
+      "id": "PR_kwDOGkKB0c47_7Lp",
+      "title": "Update draft-ietf-lamps-documentsigning-eku.md",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/17",
+      "state": "MERGED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "changes are followings\r\n\r\n> ** Section 1. Editorial.\r\n> NEW\r\n> In addition, several KeyPurposeIds have been added under the IANA repository \"SMI Security for PKIX Extended Key Purpose\" [RFC7299].  \r\n\r\nWe accepeted your comment\r\n\r\n> ** Section 1.  Editorial.\r\n> NEW\r\n> In circumstances where code signing and S/MIME certificates are also    used for document signing,\r\n> technical or policy changes made to the code signing and S/MIME ecosystem may cause unexpected behaviors ...\r\n\r\nWe accepeted your comment\r\n\r\n> ** Section 1.  What is a \"trust program\"?\r\n\r\nwe stop using term \"trust program\" and changed as following\r\n\"KeyPurposeIds are used in a PKI governed by the vendor or a set of specific group of vendors.\"\r\n\"Unless certificates are governed by a vendor(s) specific PKI, certificates that indicate usage for document signing..\"\r\n\r\n> ** Section 1.\r\n> NEW\r\n> There is no issue if vendor-defined KeyPurposeIds are used in a PKI (or a trust program) governed by a given vendor.  However, \r\n> if the   KeyPurposeId is used outside of this vendor's governance, the usage can cause interoperability issues.  \r\n\r\nWe accepeted your comment\r\n\r\n> ** Section 1.\r\n>(e.g. - When the end user encounters...\r\n>Editorially, please split this large \"(e.g.,\" text block into distinct sentences.\r\n> -- The setup on the first example seems to be that a user has ...\r\n> -- To the second example, can these potential breaking \"changes ... made to the KeyPurposeId\" be explained a bit more?\r\n\r\nwe divided the sentence, and clarified the relationship between KeyPurposeIds owning vendor and another vendor.\r\n\r\n> ** Section 1.  Editorial. s/a extended key purpose/an extended key purpose/\r\n\r\nWe accepeted your comment\r\n\r\n> ** Section 3. Editorial.\r\n> NEW\r\n> As described in [RFC5280], \"[i]f the [Extended Key Usage] extension is    present, then the certificate MUST only be used for one of the  ...\r\n\r\nWe accepeted your comment\r\n\r\n> ** Section 4.  I don't follow why there are references to RFC8358 in this section. \r\n> It seems like a very detailed example but by my read the take away from the text is that there is no change in the \r\n\r\nprescribed behavior for RFC8358.\r\nWe accepeted your comment\r\n\r\n> ** Section 4.   I'm confused by the complexity of the validation guidance being provided. \r\n> To be more specific about the text:\r\n> -- Given that the setup for the validation steps is two \"MAY statements\", how are interoperable solutions expected?\r\n> -- The second MAY statement indicate that it is optional.  The numbered steps below it seem conditional on this check though.\r\n> -- What is the derivation being noted and where is this policy coming from in the second sentence?\r\n> -- Editorially, why is there both a numbered list and the text after \"... as follows:\"?\r\n\r\nWe accepeted your comment as follows\r\nWe removed secound MAY, and numbering.\r\nWe further clarified the \" outside of scope\" case where it is up to software.\r\nWe clarified order of \"Excluded KeyPurposeId procedure\" and Permitted KeyPurposeId procedure.\r\n\r\n> ** Section 6.\r\n> I'm following the link to S/MIME (id-kp-emailProtection), but not the link to TLS (id-kp-serverAuth and id-kp-clientAuth)?\r\n\r\nwe accept your change and changed as follow.\r\n\"TLS (id-kp-clientAuth) or S/MIME (id-kp-emailProtection) etc.\"",
+      "createdAt": "2022-07-24T19:49:37Z",
+      "updatedAt": "2022-07-26T17:17:48Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "bf87257ac0384798c9578c97dba307f94ac61971",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "respond-to-AD-review",
+      "headRefOid": "1652a2dd08a3a7025c476e6d04fba7b5ac2b4e8f",
+      "closedAt": "2022-07-26T17:17:47Z",
+      "mergedAt": "2022-07-26T17:17:47Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "5e9076c8d2d0cfd51a6108e13399944224f71461"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c4-p7hE",
+          "commit": {
+            "abbreviatedOid": "54d8f18"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-07-26T15:20:55Z",
+          "updatedAt": "2022-07-26T15:20:55Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "```suggestion\r\nSecurity for PKIX Extended Key Purpose\" {{?RFC7299}}. While usage of the\r\n```",
+              "createdAt": "2022-07-26T15:20:55Z",
+              "updatedAt": "2022-07-26T15:20:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGkKB0c4-qSnh",
+          "commit": {
+            "abbreviatedOid": "0a8823f"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-07-26T16:15:49Z",
+          "updatedAt": "2022-07-26T16:15:49Z",
+          "comments": [
+            {
+              "originalPosition": 56,
+              "body": "```suggestion\r\nof the KeyPurposeIds owner, it is hard to estimate the impact of change\r\n```",
+              "createdAt": "2022-07-26T16:15:49Z",
+              "updatedAt": "2022-07-26T16:15:49Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "PR_kwDOGkKB0c49hX3l",
+      "title": "Updates to address GENART comments",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/18",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses GENART comment.",
+      "createdAt": "2022-08-22T00:04:05Z",
+      "updatedAt": "2022-08-22T00:05:06Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "5e9076c8d2d0cfd51a6108e13399944224f71461",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-genart",
+      "headRefOid": "bf5948262f18f52d18e8c3aa917a47814e741958",
+      "closedAt": "2022-08-22T00:05:06Z",
+      "mergedAt": "2022-08-22T00:05:06Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "c837cdf7a083294ee7464b31d01de69600306b97"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 19,
+      "id": "PR_kwDOGkKB0c49uTGO",
+      "title": "Adding IANA Assigned OIDs",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/19",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-08-24T14:14:53Z",
+      "updatedAt": "2022-08-28T05:10:47Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "c837cdf7a083294ee7464b31d01de69600306b97",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-oids",
+      "headRefOid": "958adf808324639acae3da9120c790b3ad44470b",
+      "closedAt": "2022-08-28T05:10:46Z",
+      "mergedAt": "2022-08-28T05:10:46Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "426285d06f7c1af4d8d63175234ae96b6f4f9d7e"
+      },
+      "comments": [
+        {
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I also checked:\r\nhttps://www.iana.org/assignments/smi-numbers/smi-numbers.xhtml#smi-numbers-1.3.6.1.5.5.7.0",
+          "createdAt": "2022-08-28T05:10:41Z",
+          "updatedAt": "2022-08-28T05:10:41Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c5A1Jy2",
+          "commit": {
+            "abbreviatedOid": "958adf8"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "It checked \r\nhttps://www.iana.org/assignments/smi-numbers/smi-numbers.xhtml#smi-numbers-1.3.6.1.5.5.7.3",
+          "createdAt": "2022-08-27T12:09:23Z",
+          "updatedAt": "2022-08-27T12:09:23Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "id": "PR_kwDOGkKB0c495oob",
+      "title": "Addressing Lars' comments",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/20",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressing Lars' [IESS Ballot comments](https://datatracker.ietf.org/doc/draft-ietf-lamps-documentsigning-eku/ballot/#draft-ietf-lamps-documentsigning-eku_lars-eggert).",
+      "createdAt": "2022-08-27T01:28:13Z",
+      "updatedAt": "2022-08-29T07:34:45Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "c837cdf7a083294ee7464b31d01de69600306b97",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-lars",
+      "headRefOid": "1a43368d6164dfb6902f2e42f32a8a5119654d5b",
+      "closedAt": "2022-08-29T02:44:11Z",
+      "mergedAt": "2022-08-29T02:44:11Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "25745b8a0e55f089242d13845207acaded915d4f"
+      },
+      "comments": [
+        {
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Debating adding more context than just \"document\".",
+          "createdAt": "2022-08-28T05:11:16Z",
+          "updatedAt": "2022-08-28T05:11:16Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c5A15cN",
+          "commit": {
+            "abbreviatedOid": "8453933"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-08-28T14:25:17Z",
+          "updatedAt": "2022-08-28T14:25:17Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nOur intended use case is people consuming the contents of signed\r\ndocuments. To be more precise, contents are intended to be\r\n```",
+              "createdAt": "2022-08-28T14:25:17Z",
+              "updatedAt": "2022-08-28T14:25:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOGkKB0c5A1-ql",
+          "commit": {
+            "abbreviatedOid": "1a43368"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-08-28T17:36:43Z",
+          "updatedAt": "2022-08-28T17:36:43Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOGkKB0c5A3Ivo",
+          "commit": {
+            "abbreviatedOid": "1a43368"
+          },
+          "author": "larseggert",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-08-29T07:34:38Z",
+          "updatedAt": "2022-08-29T07:34:45Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "I think text could stay lowercase.",
+              "createdAt": "2022-08-29T07:34:38Z",
+              "updatedAt": "2022-08-29T07:34:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "id": "PR_kwDOGkKB0c495vk7",
+      "title": "Addressing Erik's comments",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/21",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addressing Erik's [IESG Ballot comments](https://datatracker.ietf.org/doc/draft-ietf-lamps-documentsigning-eku/ballot/#draft-ietf-lamps-documentsigning-eku_erik-kline).",
+      "createdAt": "2022-08-27T03:41:33Z",
+      "updatedAt": "2022-08-28T05:08:17Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "c837cdf7a083294ee7464b31d01de69600306b97",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-kline",
+      "headRefOid": "1d0bf6f03ea8d3a5e9abf11428cc0875ef36c5d6",
+      "closedAt": "2022-08-28T05:08:17Z",
+      "mergedAt": "2022-08-28T05:08:16Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "3eed1ba9e8ba96df8a40ca78db3f7d87911db56f"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c5A1KWW",
+          "commit": {
+            "abbreviatedOid": "1d0bf6f"
+          },
+          "author": "tadahik",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-08-27T12:36:26Z",
+          "updatedAt": "2022-08-27T12:36:26Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "PR_kwDOGkKB0c4_kXXO",
+      "title": "addressing Paul's comment",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/22",
+      "state": "MERGED",
+      "author": "tadahik",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-09-26T02:17:46Z",
+      "updatedAt": "2022-09-29T17:18:44Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "25745b8a0e55f089242d13845207acaded915d4f",
+      "headRepository": "tadahik/documentsigning-eku",
+      "headRefName": "AddressingPaul'sComment",
+      "headRefOid": "3727b298ae0d4e54607ef2ee389b115ff51d7ade",
+      "closedAt": "2022-09-29T17:18:43Z",
+      "mergedAt": "2022-09-29T17:18:43Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "7c4e2094bdd9c1842847665eefa3c1f2dd0a8cee"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGkKB0c5DGSGQ",
+          "commit": {
+            "abbreviatedOid": "3727b29"
+          },
+          "author": "seanturner",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-09-29T17:18:28Z",
+          "updatedAt": "2022-09-29T17:18:28Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "id": "PR_kwDOGkKB0c58Qs7f",
+      "title": "Update workflows",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/24",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Update archive.yml.",
+      "createdAt": "2024-09-22T01:57:54Z",
+      "updatedAt": "2024-10-28T01:13:39Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "7c4e2094bdd9c1842847665eefa3c1f2dd0a8cee",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-update-workflows",
+      "headRefOid": "32f3b942bc05d358df9817cc8ab21f665e4ba1be",
+      "closedAt": "2024-10-28T01:13:39Z",
+      "mergedAt": "2024-10-28T01:13:39Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "4d026d3ddde5f497f0d97b6015e3e34ed445f7ce"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 25,
+      "id": "PR_kwDOGkKB0c58QuAi",
+      "title": "Update README.md",
+      "url": "https://github.com/lamps-wg/documentsigning-eku/pull/25",
+      "state": "MERGED",
+      "author": "seanturner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixing link for diff.",
+      "createdAt": "2024-09-22T02:21:06Z",
+      "updatedAt": "2024-10-28T01:13:50Z",
+      "baseRepository": "lamps-wg/documentsigning-eku",
+      "baseRefName": "main",
+      "baseRefOid": "7c4e2094bdd9c1842847665eefa3c1f2dd0a8cee",
+      "headRepository": "lamps-wg/documentsigning-eku",
+      "headRefName": "seanturner-diff-link",
+      "headRefOid": "c902a673f6ca0ef4738146368073e8ea9258e8a3",
+      "closedAt": "2024-10-28T01:13:50Z",
+      "mergedAt": "2024-10-28T01:13:50Z",
+      "mergedBy": "seanturner",
+      "mergeCommit": {
+        "oid": "5f8eab5a938c232c457735fbf8ace12b4463b04c"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
